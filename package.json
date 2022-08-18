@@ -1,26 +1,29 @@
 {
-    "name": "Team_Employees",
-    "version": "1.0.0",
-    "description": "OOP",
-    "main": "index.js",
-    "directories": {
-      "assets": "assets",
-      "test": "test"
-    },
-    "scripts": {
-      "test": "jest --verbose test/*"
-    },
-    "repository": {
-      "type": "",
-      "url": "git+https://github.com/annabarrowtech/Team_Profile_Generator"
-    },
-    "author": "",
-    "license": "ISC",
-    "homepage": "https://github.com/annabarrowtech/Team_Profile_Generator",
-    "dependencies": {
-      "inquirer": "^6.3.1"
-    },
-    "devDependencies": {
-      "jest": "^24.8.0"
-    }
+  "name": "team_employees",
+  "version": "1.0.0",
+  "description": "OOP",
+  "main": "index.js",
+  "directories": {
+    "assets": "assets",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "",
+    "url": "git+https://github.com/annabarrowtech/Team_Profile_Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/annabarrowtech/Team_Profile_Generator",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "bugs": {
+    "url": "https://github.com/annabarrowtech/Team_Profile_Generator/issues"
   }
+}
