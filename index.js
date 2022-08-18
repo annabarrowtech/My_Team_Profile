@@ -11,9 +11,12 @@ const generateTeam = require("./src/template.js")
 teamArray = [];
 
 
-
+// Initializes the app by allowing the below prompts to be asked and then displayed in the team.html
 function runApp () {
 
+  // First prompt in the console where you pick between the three JS files available
+  // Whatever you pick it changes the routing of the questions
+  // When No more team members is selected the team creation is completed and submitted to the html file
   function createTeam () {
     inquirer.prompt([{
       type: "list",
@@ -38,7 +41,7 @@ function runApp () {
     })
   }
 // OOP Functions
-
+// Manager path asks you questions specifically about the manager
 function addManager() {
   inquirer.prompt ([
     
@@ -65,7 +68,7 @@ function addManager() {
       name: "managerOfficeNumber",
       message: "What is the manager's office number?"
     }
-
+// returns you back to run app function to add more employees or complete creation
   ]).then(answers => {
     const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
     teamArray.push(manager);
@@ -74,7 +77,7 @@ function addManager() {
 
 }
 
-
+// Engineer path asks you questions specifically about the manager
 function addEngineer() {
     inquirer.prompt([
       
@@ -101,7 +104,7 @@ function addEngineer() {
         name: "engineerGithub",
         message: "What is the engineer's GitHub username?"
       }
-
+// returns you back to run app function to add more employees or complete creation
     ]).then(answers => {
       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
       teamArray.push(engineer);
@@ -109,7 +112,7 @@ function addEngineer() {
     });
 
   }
-
+// Intern path asks you questions specifically about the manager
   function addIntern() {
     inquirer.prompt([
       
@@ -136,7 +139,7 @@ function addEngineer() {
         name: "internSchool",
         message: "What school does the intern attend?"
       }
-
+// returns you back to run app function to add more employees or complete creation
     ]).then(answers => {
       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
       teamArray.push(intern);
